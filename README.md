@@ -11,15 +11,25 @@
 
 ## Save pass:
 
+Registry name: flasksampleapp
+Login server: flasksampleapp.azurecr.io
+username: flasksampleapp
+password :LSBP7AutwA5xC4L6O5GncjCOsteLE+iH/+QAL5TiUI+ACRDuZ0EP
 
+## Run from terminal: to built a docker image and push it into an container registory
 
+docker build -t flasksampleapp.azurecr.io/mltest:latest .
 
-## Run from terminal:
+docker login flasksampleapp.azurecr.io
 
-docker build -t flasksimpleapp.azurecr.io/mltest:latest .
+docker push flasksampleapp.azurecr.io/mltest:latest
 
-docker login flasksimpleapp.azurecr.io
+## Open Web app Server in azure and fill the details
 
-docker push flasksimpleapp.azurecr.io/mltest:latest
+Note : Choose github account and choost container reg.
 
+Pull the docker image from the container reg to web app
 
+Choose the github actions and check in gituhub actions.
+
+Automatically the github/workflow will get create.
